@@ -21,22 +21,22 @@ $MESS["CLIENT_FORM_RE_REG_LINK"]="Регистрация сайта";
 		<td>Описание</td>
 	</thead>
 	<tr>
-		<td><code>AddEventHandler("collected.clientforms", "OnEmailSent", "OnEmailSentHandler");</code></td>
+		<td><code>AddEventHandler("kit.clientforms", "OnEmailSent", "OnEmailSentHandler");</code></td>
 		<td><code>array $formResult, array $Errors</code></td>
 		<td>Событие вызываемое при успешной отправке почтового сообщения</td>
 	</tr>
 	<tr>
-		<td><code>AddEventHandler("collected.clientforms", "OnEmailSentError", "OnEmailSentErrorHandler");</code></td>
+		<td><code>AddEventHandler("kit.clientforms", "OnEmailSentError", "OnEmailSentErrorHandler");</code></td>
 		<td><code>array $formResult, array $Errors</code></td>
 		<td>Событие вызываемое при ошибке отправки почтового сообщения</td>
 	</tr>
 	<tr>
-		<td><code>AddEventHandler("collected.clientforms", "OnIBlockAdd", "OnIBlockAddHandler");</code></td>
+		<td><code>AddEventHandler("kit.clientforms", "OnIBlockAdd", "OnIBlockAddHandler");</code></td>
 		<td><code>array $formResult, array $Errors</code></td>
 		<td>Событие вызываемое при успешном добавлении элемента инфоблока</td>
 	</tr>
 	<tr>
-		<td><code>AddEventHandler("collected.clientforms", "OnIBlockAddError", "OnIBlockAddErrorHandler");</code></td>
+		<td><code>AddEventHandler("kit.clientforms", "OnIBlockAddError", "OnIBlockAddErrorHandler");</code></td>
 		<td><code>array $formResult, array $Errors</code></td>
 		<td>Событие вызываемое при ошибке добавления элемента инфоблока</td>
 	</tr>

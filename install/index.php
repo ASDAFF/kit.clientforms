@@ -7,12 +7,12 @@ IncludeModuleLangFile(__FILE__);
 
 
 
-class collected_clientforms extends CModule
+class kit_clientforms extends CModule
 {
-	const MODULE_ID = 'collected.clientforms';
+	const MODULE_ID = 'kit.clientforms';
 	var  $IBLOCK_TYPE = 'client_forms';
 	var  $IBLOCK_CODE = 'client_forms';
-	var $MODULE_ID = 'collected.clientforms';
+	var $MODULE_ID = 'kit.clientforms';
 	var $MODULE_VERSION;
 	var $MODULE_VERSION_DATE;
 	var $MODULE_NAME;

@@ -3,7 +3,7 @@
  * Copyright (c) 30/1/2020 Created By/Edited By ASDAFF asdaff.asad@yandex.ru
  */
 
-require_once  $_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/collected.clientforms/classes/libs/ReCaptcha/autoload.php';
+require_once  $_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/kit.clientforms/classes/libs/ReCaptcha/autoload.php';
 
 IncludeModuleLangFile(__FILE__);
 
@@ -12,8 +12,8 @@ if (!class_exists("ClientForms"))
 {
 	class ClientForms
 	{
-		const MODULE_ID = 'collected.clientforms';
-		const MODULE_PATH = '/bitrix/modules/collected.clientforms/';
+		const MODULE_ID = 'kit.clientforms';
+		const MODULE_PATH = '/bitrix/modules/kit.clientforms/';
 
 		public $formResult = '';
 		public $formName = '';
@@ -34,8 +34,8 @@ if (!class_exists("ClientForms"))
 			}
 
 
-			$this->re_site_key = COption::GetOptionString("collected.clientforms", "RE_SITE_KEY");
-			$this->re_seret_key = COption::GetOptionString("collected.clientforms", "RE_SEC_KEY");
+			$this->re_site_key = COption::GetOptionString("kit.clientforms", "RE_SITE_KEY");
+			$this->re_seret_key = COption::GetOptionString("kit.clientforms", "RE_SEC_KEY");
 
 		}
 
@@ -85,18 +85,18 @@ if (!class_exists("ClientForms"))
 
 		public function insertAdminScripts(){
 			global $APPLICATION;
-			$APPLICATION->SetAdditionalCSS($_SERVER['DOCUMENT_ROOT']."/bitrix/components/collected/client.forms/parameters.css", true);
-			$APPLICATION->SetAdditionalCSS($_SERVER['DOCUMENT_ROOT']."/bitrix/components/collected/client.forms/templates/.default/lib/bootstrap/bootstrap.css", true);
-			$APPLICATION->AddHeadScript("/bitrix/components/collected/client.forms/templates/.default/lib/jquery/jquery.js");
-			$APPLICATION->AddHeadScript("/bitrix/components/collected/client.forms/templates/.default/lib/jquery/jquery-ui.js");
-			$APPLICATION->AddHeadScript("/bitrix/components/collected/client.forms/templates/.default/lib/form-builder/form-builder.js");
-			$APPLICATION->AddHeadScript("/bitrix/components/collected/client.forms/parameters.js");
+			$APPLICATION->SetAdditionalCSS($_SERVER['DOCUMENT_ROOT']."/bitrix/components/kit/client.forms/parameters.css", true);
+			$APPLICATION->SetAdditionalCSS($_SERVER['DOCUMENT_ROOT']."/bitrix/components/kit/client.forms/templates/.default/lib/bootstrap/bootstrap.css", true);
+			$APPLICATION->AddHeadScript("/bitrix/components/kit/client.forms/templates/.default/lib/jquery/jquery.js");
+			$APPLICATION->AddHeadScript("/bitrix/components/kit/client.forms/templates/.default/lib/jquery/jquery-ui.js");
+			$APPLICATION->AddHeadScript("/bitrix/components/kit/client.forms/templates/.default/lib/form-builder/form-builder.js");
+			$APPLICATION->AddHeadScript("/bitrix/components/kit/client.forms/parameters.js");
 
 		}
 
 		public function insertGlobalScripts(){
 			global $APPLICATION;
-			$APPLICATION->AddHeadScript("/bitrix/components/collected/client.forms/templates/.default/lib/referer/referer.js");
+			$APPLICATION->AddHeadScript("/bitrix/components/kit/client.forms/templates/.default/lib/referer/referer.js");
 			$APPLICATION->AddHeadString('<meta name="cmsmagazine" content="eb5a6fa4dfcd6e79d367222fbcf8513b" />',true);
 		}
 
@@ -129,7 +129,7 @@ if (!class_exists("ClientForms"))
 		}
 
 		private function OnEmailSent(){
-			foreach(GetModuleEvents("collected.clientforms", "OnEmailSent", true) as $arEvent)
+			foreach(GetModuleEvents("kit.clientforms", "OnEmailSent", true) as $arEvent)
 			{
 				if(ExecuteModuleEventEx($arEvent, array(&$this->formResult, &$this->Errors))===false)
 				{
@@ -150,7 +150,7 @@ if (!class_exists("ClientForms"))
 		}
 
 		private function OnIBlockAdd(){
-			foreach(GetModuleEvents("collected.clientforms", "OnIBlockAdd", true) as $arEvent)
+			foreach(GetModuleEvents("kit.clientforms", "OnIBlockAdd", true) as $arEvent)
 			{
 				if(ExecuteModuleEventEx($arEvent, array(&$this->formResult, &$this->Errors))===false)
 				{
@@ -171,7 +171,7 @@ if (!class_exists("ClientForms"))
 		}
 
 		private function OnEmailSentError(){
-			foreach(GetModuleEvents("collected.clientforms", "OnEmailSentError", true) as $arEvent)
+			foreach(GetModuleEvents("kit.clientforms", "OnEmailSentError", true) as $arEvent)
 			{
 				if(ExecuteModuleEventEx($arEvent, array(&$this->formResult, &$this->Errors))===false)
 				{
@@ -192,7 +192,7 @@ if (!class_exists("ClientForms"))
 		}
 
 		private function OnIBlockAddError(){
-			foreach(GetModuleEvents("collected.clientforms", "OnIBlockAddError", true) as $arEvent)
+			foreach(GetModuleEvents("kit.clientforms", "OnIBlockAddError", true) as $arEvent)
 			{
 				if(ExecuteModuleEventEx($arEvent, array(&$this->formResult, &$this->Errors))===false)
 				{

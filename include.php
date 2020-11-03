@@ -5,5 +5,5 @@
 
 global $DB, $MESS, $APPLICATION;
 IncludeModuleLangFile(__FILE__);
-require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/collected.clientforms/classes/general/form.php");
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/kit.clientforms/classes/general/form.php");
 ?>

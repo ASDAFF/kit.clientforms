@@ -5,19 +5,19 @@
 
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
-CModule::includeModule("collected.clientforms");
+CModule::includeModule("kit.clientforms");
 
 //echo ClientForms::MODULE_PATH;
 
 ?>
 
-<!-- <link rel="stylesheet" href="/bitrix/components/collected/client.forms/parameters.css" />
-<link rel="stylesheet" href="/bitrix/components/collected/client.forms/templates/.default/lib/bootstrap/bootstrap.css">
+<!-- <link rel="stylesheet" href="/bitrix/components/kit/client.forms/parameters.css" />
+<link rel="stylesheet" href="/bitrix/components/kit/client.forms/templates/.default/lib/bootstrap/bootstrap.css">
 
-<script defer src="/bitrix/components/collected/client.forms/templates/.default/lib/jquery/jquery.js"></script>
-<script defer src="/bitrix/components/collected/client.forms/templates/.default/lib/jquery/jquery-ui.js"></script>
-<script defer src="/bitrix/components/collected/client.forms/templates/.default/lib/form-builder/form-builder.js"></script>
-<script defer src="/bitrix/components/collected/client.forms/parameters.js"></script>
+<script defer src="/bitrix/components/kit/client.forms/templates/.default/lib/jquery/jquery.js"></script>
+<script defer src="/bitrix/components/kit/client.forms/templates/.default/lib/jquery/jquery-ui.js"></script>
+<script defer src="/bitrix/components/kit/client.forms/templates/.default/lib/form-builder/form-builder.js"></script>
+<script defer src="/bitrix/components/kit/client.forms/parameters.js"></script>
  -->
 
 <?php 

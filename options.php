@@ -12,7 +12,7 @@ Loc::loadMessages(__FILE__);
 
 $request = HttpApplication::getInstance()->getContext()->getRequest();
 
-$module_id = "collected.clientforms";
+$module_id = "kit.clientforms";
 
 Loader::includeModule($module_id);
 
@@ -30,17 +30,15 @@ Loader::includeModule($module_id);
 		array_push($sids, $res["ID"]);
 	}
 
-	//var_dump($sids);
-
 	foreach ($OPTIONS as $o => $opt) {
 
-		$option = COption::GetOptionString("collected.clientforms", $o);
+		$option = COption::GetOptionString("kit.clientforms", $o);
 		$OPTIONS[$o] = $option;
 		if ($_REQUEST[$o]!='') {
 
 
 			COption::SetOptionString(
-				"collected.clientforms",
+				"kit.clientforms",
 				$o,
 				$_REQUEST[$o],
 				false,

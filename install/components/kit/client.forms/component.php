@@ -9,14 +9,14 @@ use Bitrix\Main\Config\Option;
 
 $arResult['FORM'] = json_decode((preg_replace('/&quot;/', '"', $arParams['OPTIONS'])), true);
 
-$arParams['RE_SITE_KEY'] = COption::GetOptionString("collected.clientforms", "RE_SITE_KEY");
+$arParams['RE_SITE_KEY'] = COption::GetOptionString("kit.clientforms", "RE_SITE_KEY");
 
 
 if ($_REQUEST['AJAX'] !== "Y"){
 	$this->IncludeComponentTemplate();
 }else{
 	$APPLICATION->RestartBuffer();
-	CModule::IncludeModule('collected.clientforms');
+	CModule::IncludeModule('kit.clientforms');
 
 	$form = new ClientForms($_REQUEST);
 
